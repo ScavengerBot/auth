@@ -1,0 +1,106 @@
+@import url("https://www.scavengerbot.io/css/styles-bundled.css");
+
+/* form *:not(.auth-lock-social-buttons-pane *):not(button) { background: unset !important; box-shadow: unset !important; color: white !important; } */
+body *:not(.auth-lock-social-buttons-pane *):not(button):not([role=button]):not([role=alert] *):not(.auth0-lock-input-wrap) { background: unset !important; box-shadow: unset !important; color: white !important; }
+
+/* HIDE */
+.auth0-lock-overlay { display: none; }
+.auth0-lock-name { display: none; }
+
+
+
+.auth0-lock-tabs { 
+  padding: 0 1.25rem 2rem !important;
+}
+
+.auth0-lock-tabs li { 
+  position: relative;
+}
+
+.auth0-lock-tabs li > * {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 0.5rem;
+  line-height: 42px;
+  position: relative;
+  display: inline-block;
+  color: #7098d4 !important;
+  will-change: filter;
+  transition: .22s ease-in-out;
+}
+
+.auth0-lock-tabs li.auth0-lock-tabs-current > * {
+  color: #fff !important;
+  -webkit-filter: drop-shadow(0 0 11px #00f) drop-shadow(0 0 11px #00f);
+  filter: drop-shadow(0 0 11px #00f) drop-shadow(0 0 11px #00f);
+}
+
+.auth0-lock-tabs li.auth0-lock-tabs-current::after {
+  content: "";
+  display: block;
+  height: 3px; 
+  width: 100%;
+  background: white !important;
+}
+
+
+button { background: blue !important; border-radius: 100px !important; font-size: 18px !important; transition: unset !important; }
+button * { font-size: 18px !important; transition: unset !important; transform: unset !important; }
+
+
+
+
+/* Normal 
+*****************************************************/
+.auth0-lock.auth0-lock .auth0-lock-input-wrap * { 
+  transition: .22s ease-in-out;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-input-wrap { 
+  background: rgba(0,0,255,.1) !important; 
+  border-radius: 5px; 
+  border: 1.5px solid #667bb8; 
+}
+
+.auth0-lock.auth0-lock .auth0-lock-input-wrap svg path {
+  fill: #667bb8 !important;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-input-wrap input::placeholder {
+  color: #667bb8;
+  opacity: 1;
+}
+
+/* Focused 
+*****************************************************/
+.auth0-lock.auth0-lock .auth0-lock-input-wrap.auth0-lock-focused { 
+  background: rgba(0,0,255,.2) !important; 
+  border-color: white;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-input-wrap.auth0-lock-focused svg path {
+  fill: white !important;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-input-wrap.auth0-lock-focused input::placeholder {
+  color: white;
+  opacity: 0;
+}
+
+/* Error 
+*****************************************************/
+.auth0-lock.auth0-lock .auth0-lock-error .auth0-lock-input-wrap { 
+  background: rgba(255,0,0,.1) !important; 
+  border-color: #ff1165;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-error .auth0-lock-input-wrap svg path {
+  fill: #ff1165 !important;
+}
+
+.auth0-lock.auth0-lock .auth0-lock-error .auth0-lock-input-wrap input::placeholder {
+  color: #ff1165;
+  opacity: 1;
+}
+
+.auth0-lock-error-invalid-hint { color: white !important; }
